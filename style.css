@@ -1,0 +1,40 @@
+:root {
+    --clr-bg1: #29323d;
+    --clr-bg2: #1e242c;
+    --clr-text: #e5f2fc;
+
+    --sidebar-margin: clamp(30vw, 20rem, 50vw);
+
+    color-scheme: dark;
+}
+
+body {
+    color: var(--clr-text);
+    background-color: var(--clr-bg1);
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-size: 1.3rem;
+
+    margin: 0;
+    display: flex;
+}
+
+#left-side {
+    background-color: var(--clr-bg2);
+    width: var(--sidebar-margin);
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+#left-side-in {
+    padding: 2rem;
+}
+
+#right-side {
+    margin-left: var(--sidebar-margin);
+}
+
+#right-side-in {
+    padding: 2rem;
+}
