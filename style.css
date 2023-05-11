@@ -3,7 +3,7 @@
     --clr-bg2: #1e242c;
     --clr-text: #e5f2fc;
 
-    --sidebar-margin: clamp(30vw, 20rem, 50vw);
+    --sidebar-margin: 28rem;
 
     color-scheme: dark;
 }
@@ -25,10 +25,21 @@ body {
     position: fixed;
     z-index: 1;
     overflow-x: hidden;
+    border-radius: 0 2rem 2rem 0;
 }
 
 #left-side-in {
     padding: 2rem;
+}
+
+#title {
+    display: flex;
+    white-space: nowrap;
+}
+
+#title > img {
+    height: 5rem;
+    margin: 1rem 0 0 1.5rem;
 }
 
 #right-side {
