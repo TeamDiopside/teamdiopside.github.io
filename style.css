@@ -64,7 +64,7 @@ p {
     width: 17rem;
     font-size: 140%;
     text-decoration: none;
-    transition: background-color ease-in-out 100ms, transform ease-in-out 50ms;
+    transition: background-color ease-in-out 170ms, transform ease-in-out 80ms;
 }
 
 #page-list > a:hover {
