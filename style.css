@@ -1,6 +1,7 @@
 :root {
     --clr-bg1: #29323d;
     --clr-bg2: #1e242c;
+    --clr-bg3: #46515f;
     --clr-text: #e5f2fc;
 
     --sidebar-margin: 29rem;
@@ -31,13 +32,15 @@ body {
     padding: 1rem;
     background-color: var(--clr-bg1);
     border-radius: 1rem;
-    width: 15rem;
+    width: 17rem;
     font-size: 140%;
     text-decoration: none;
+    transition: background-color ease-in-out 100ms, transform ease-in-out 50ms;
 }
 
 #page-list > a:hover {
-    background-color: var(--clr-bg2);
+    background-color: var(--clr-bg3);
+    transform: scale(1.2) translateX(1.5rem);
 }
 
 #left-side {
