@@ -27,11 +27,11 @@ p {
 
 #left-side {
     background-color: var(--clr-bg2);
-    width: var(--sidebar-margin);
     height: 100vh;
-    position: fixed;
+    position: sticky;
+    top: 0;
+    left: 0;
     z-index: 1;
-    overflow-x: hidden;
     border-radius: 0 2rem 2rem 0;
 }
 
@@ -59,9 +59,11 @@ p {
 #page-list > a {
     color: var(--clr-text);
     padding: 1rem;
+    padding-left: 1.5rem;
     background-color: var(--clr-bg1);
     border-radius: 1rem;
-    width: 17rem;
+    width: fit-content;
+    min-width: 17rem;
     font-size: 140%;
     text-decoration: none;
     transition: background-color ease-in-out 170ms, transform ease-in-out 80ms;
@@ -70,10 +72,6 @@ p {
 #page-list > a:hover {
     background-color: var(--clr-bg3);
     transform: scale(1.2) translateX(1.5rem);
-}
-
-#right-side {
-    margin-left: var(--sidebar-margin);
 }
 
 #right-side-in {
