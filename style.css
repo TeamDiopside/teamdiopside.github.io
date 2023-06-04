@@ -45,8 +45,7 @@ p {
 }
 
 #title > img {
-    height: 5rem;
-    margin: 1rem 0 0 1.5rem;
+    width: 25rem;
 }
 
 #page-list {
