@@ -1,1 +1,1 @@
-# teamdiopside.github.io
+![](teamdiopside.github.io/assets/diopside/Title.png)
