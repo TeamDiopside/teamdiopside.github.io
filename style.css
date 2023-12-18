@@ -4,6 +4,7 @@
     --clr-bg3: #3f4956;
     --clr-bg4: #556776;
     --clr-bg5: #667b8d;
+    --clr-bg6: #2d3745;
     --clr-text: #e5f2fc;
 
     --radius: 1.2rem;
@@ -21,12 +22,49 @@ body {
     font-size: 1.3rem;
 
     margin: 0;
-    display: flex;
 }
 
 p {
     margin: 0;
     margin-bottom: 5rem;
+}
+
+a {
+    color: var(--clr-text);
+    text-decoration: none;
+}
+
+#start {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(var(--clr-bg2), var(--clr-bg1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#start-title {
+    max-width: 90vw;
+}
+
+#start-buttons {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.start-button {
+    background-color: var(--clr-bg6);
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+#info-area {
+    display: flex;
 }
 
 #left-side {
