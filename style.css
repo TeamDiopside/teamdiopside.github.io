@@ -126,7 +126,13 @@ a {
 
 .tiles {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15rem;
+    grid-auto-rows: 15rem;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    /* grid-template-columns: min-content auto; */
+    /* grid-auto-flow: column dense; */
+    /* grid: auto-flow dense; */
+    /* grid-auto-columns: auto; */
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -134,15 +140,21 @@ a {
 .tile {
     background-color: var(--clr-bg3);
     border-radius: var(--radius);
-    padding: 1rem;
+    padding: 1.5rem;
     display: grid;
     justify-content: center;
     gap: 1rem;
+    max-width: 15rem;
 }
 
 .tileimg {
-    border-radius: 0.7rem;
+    border-radius: 1rem;
     width: 100%;
+}
+
+.tiletext {
+    font-size: 2rem;
+    justify-self: center;
 }
 
 
