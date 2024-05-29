@@ -1,32 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
-
+    
     <title>Team Diopside</title>
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
 </head>
-
 <body>
-    <div class="start">
-        <div class="header"></div>
-        <div class="start-inner">
-            <img src="assets/diopside/Title.png" class="title">
-            <div class="start-buttons">
-                <a href="#about" class="start-button">About</a>
-                <a href="#mods" class="start-button">Mods</a>
-                <a href="#modpacks" class="start-button">Modpacks</a>
+    <div class="content-wrapper">
+        <header>
+            <div class="header-container">
+                <nav class="hamburger-nav noSelect">
+                    <button class="nav-toggle" aria-label="toggle navigation">
+                        <span class="hamburger"></span>
+                    </button>
+                </nav>
+                <img src="assets/diopside/Title.png" alt="Team Diopside" class="logo">
+                
+                <ul class="nav-links">
+                    <!-- Hier moeten we andere knopjes van maken vind ik maar ik weet zo snel niet wat -->
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#mods">Mods</a></li>
+                    <li><a href="#other">Other</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section id="about" class="container">
+                <h2>About Us</h2>
+                <p>We're Team Diopside! We make Minecraft content like mods to enhance you're experience!</p>
+            </section>
+
+            <section id="mods" class="container">
+                <h2>Our Mods</h2>
+                <p>You can find all our mods here. Click on them to find out more!</p>
+                <div class="project-grid">
+                    <a href="https://teamdiopside.nl/infinitybuttons" class="project">
+                        <div class="project-content">
+                            <img src="assets/infinitybuttons/logo.png" alt="Infinity Buttons" class="project-image">
+                            <h3>Infinity Buttons</h3>
+                        </div>
+                    </a>
+                    <a href="https://teamdiopside.nl/expandingtechnologies" class="project">
+                        <div class="project-content">
+                            <img src="assets/expandingtechnologies/icon.png" alt="Expanding Technologies" class="project-image">
+                            <h3>Expanding Technologies</h3>
+                        </div>
+                    </a>
+                    <a href="https://teamdiopside.nl/toolcompat" class="project">
+                        <div class="project-content">
+                            <img src="assets/toolcompat/icon.png" alt="Tool Compat" class="project-image">
+                            <h3>Tool Compat</h3>
+                        </div>
+                    </a>
+                    <a href="https://teamdiopside.nl/seamless" class="project">
+                        <div class="project-content">
+                            <img src="assets/seamless/logo.png" alt="Seamless" class="project-image">
+                            <h3>Seamless</h3>
+                        </div>
+                    </a>
+                    <a href="https://teamdiopside.nl/separatedleaves" class="project">
+                        <div class="project-content">
+                            <img src="assets/separatedleaves/icon.png" alt="Separated Leaves" class="project-image">
+                            <h3>Separated Leaves</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+            <section id="other" class="container">
+                <h2>Other Projects</h2>
+                <p>Besides mods we also work on other projects, like modpacks and resourcepacks. You can check them out here!</p>
+                <div class="project-grid">
+                    <a href="https://teamdiopside.nl/vanillaparadise" class="project">
+                        <div class="project-content">
+                            <img src="assets/vanillaparadise/icon.png" alt="Vanilla Paradise" class="project-image">
+                            <div class="project-info">
+                                <h3>Vanilla Paradise</h3>
+                                <p>Modpack</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://teamdiopside.nl/better-head-holding" class="project">
+                        <div class="project-content">
+                            <img src="assets/resourcepacks/betterheadholding.png" alt="Better Head Holding" class="project-image">
+                            <div class="project-info">
+                                <h3>Better Head Holding</h3>
+                                <p>Resource Pack</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://teamdiopside.nl/better-map-items" class="project">
+                        <div class="project-content">
+                            <img src="assets/resourcepacks/bettermapitems.png" alt="Better Map Items" class="project-image">
+                            <div class="project-info">
+                                <h3>Better Map Items</h3>
+                                <p>Resource Pack</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://teamdiopside.nl/better-spruce-trapdoor" class="project">
+                        <div class="project-content">
+                            <img src="assets/resourcepacks/bettersprucetrapdoor.png" alt="Better Spruce Trapdoor" class="project-image">
+                            <div class="project-info">
+                                <h3>Better Spruce Trapdoor</h3>
+                                <p>Resource Pack</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Team Diopside. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/TeamDiopside" target="_blank">GitHub</a>
+                <a href="https://www.curseforge.com/members/team_diopside/projects" target="_blank">CurseForge</a>
+                <a href="https://larsmans.nl/" target="_blank">Lars</a>
+                <a href="https://curryducker.nl/" target="_blank">Curry</a>
             </div>
         </div>
-        <div class="footer"></div>
-    </div>
-</body>
+    </footer>
 
+    <script src="script.js"></script>
+</body>
 </html>
