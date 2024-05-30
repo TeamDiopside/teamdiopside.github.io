@@ -162,7 +162,9 @@ section {
 }
 
 .project {
-    background-color: var(--clr-bg6);
+    --project-bg: var(--clr-bg6);
+    --project-hover-bg: var(--clr-bg3);
+    background-color: var(--project-bg);
     padding: 20px;
     border-radius: var(--radius);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -173,10 +175,10 @@ section {
 }
 
 .project:hover {
-    /* background-color: lighten(var(--clr-bg3), 50%); */
-    /* filter: brightness(150%); */
+    background-color: var(--project-hover-bg);
     translate: 0 -10px;
     scale: 1.05;
+    box-shadow: 0 0 70px var(--project-bg);
 }
 
 .project-content {
@@ -216,24 +218,28 @@ section {
 }
 
 .ib-bg {
-    background-color: #18413d;
+    --project-bg: #18413d;
+    --project-hover-bg: #1e4c48;
 }
 
 .et-bg {
-
-    background-color: #1d4350;
+    --project-bg: #1d4350;
+    --project-hover-bg: #234c59;
 }
 
 .tc-bg {
-    background-color: #322e51;
+    --project-bg: #322e51;
+    --project-hover-bg: #3b375b;
 }
 
 .seamless-bg {
-    background-color: #473141;
+    --project-bg: #473141;
+    --project-hover-bg: #4e3748;
 }
 
 .sl-bg {
-    background-color: #234d40;
+    --project-bg: #234d40;
+    --project-hover-bg: #295446;
 }
 
 main {
