@@ -5,7 +5,7 @@
     --clr-bg4: #556776;
     --clr-bg5: #667b8d;
     --clr-bg6: #343f4e;
-    --clr-bg7: #161b22;
+    --clr-bg7: #14181f;
     --clr-text: #e5f2fc;
 
     --radius: 1rem;
@@ -55,6 +55,7 @@ a {
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .header-container {
@@ -142,6 +143,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    scroll-margin-top: 150px;
 }
 
 .container h2 {
