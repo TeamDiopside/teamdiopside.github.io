@@ -43,6 +43,7 @@ function addDownloadButton(href, imgSrc, platformName, linkContainer) {
     newLink.href = href;
     newLink.target = '_blank';
     newLink.classList.add('project');
+    newLink.classList.add('noSelect');
 
     var newDiv = document.createElement('div');
     newDiv.classList.add('project-content');
