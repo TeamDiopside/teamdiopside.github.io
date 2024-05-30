@@ -15,14 +15,36 @@ main {
 .project-info {
     background-color: var(--clr-bg3);
     display: flex;
-    width: 30vw;
+    flex-direction: column;
+    width: 20vw;
     text-align: center;
-    padding: 50px;
+    padding: 2vw;
+    gap: 4vh;
     border-radius: 0 20px 20px 0;
+    box-shadow: 0 0 15px var(--clr-bg2);
 }
 
 .project-info h2 {
     margin: 0;
+    align-self: center;
+    text-align: center;
+}
+
+.project-info p {
+    margin: 0;
+}
+
+.project-title {
+    display: flex;
+    align-self: center;
+    text-align: center;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.big-project-image {
+    margin-right: 0px;
+    max-width: 200px;
 }
 
 /* Responsive Styles */
@@ -39,9 +61,14 @@ main {
     }
 
     .project-info {
-        width: 100%;
-        padding: 50px 0 50px 0;
-        border-radius: 0;
+        width: 85vw;
+        padding: 5vw;
+        align-self: flex-start;
+    }
+
+    .big-project-image {
+        margin-right: 0px;
+        max-width: 30vw;
     }
 
     .project-info img {
