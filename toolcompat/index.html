@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <title>Tool Compat</title>
-      <meta http-equiv = "refresh" content = "0; url = https://modrinth.com/mod/toolcompat" />
-   </head>
-   <body>
-      <p>Redirecting to Modrinth</p>
-   </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Compat</title>
+    <script src="../project.js"></script>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            const projectName = 'Tool Compat';
+            const projectInfo = 'A mod that adds missing tools for mods!';
+            const projectId = 'toolcompat';
+            const projectType = 'mod';
+            loadProjectPage(projectName, projectInfo, projectId, projectType);
+        };
+    </script>
+</body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+    
+    <title>{{projectName}}</title>
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="content-wrapper">
+        <header>
+            <div class="header-container">
+                <nav class="hamburger-nav noSelect">
+                    <button class="nav-toggle" aria-label="toggle navigation">
+                        <span class="hamburger"></span>
+                    </button>
+                </nav>
+                <img src="../assets/diopside/Title.png" alt="Team Diopside" class="logo">
+                
+                <ul class="nav-links">
+                    <!-- Hier moeten we andere knopjes van maken vind ik maar ik weet zo snel niet wat -->
+                    <li><a href="https://teamdiopside.nl/">Home</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <div class="projects">
+                <div class="project-info">
+                    <img src="../assets/{{projectId}}/icon.png" alt="{{projectName}}" class="project-image" style="max-width: 200px;">
+                    <div style="align-self: center;">
+                        <h2>{{projectName}}</h2>
+                        <p>{{projectInfo}}</p>
+                    </div>
+                </div>
+                <section id="mods" class="container">
+                    <h2>Download</h2>
+                    <div class="project-grid" id="downloads"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Team Diopside. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/TeamDiopside" target="_blank">GitHub</a>
+                <a href="https://www.curseforge.com/members/team_diopside/projects" target="_blank">CurseForge</a>
+                <a href="https://larsmans.nl/" target="_blank">Lars</a>
+                <a href="https://curryducker.nl/" target="_blank">Curry</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
