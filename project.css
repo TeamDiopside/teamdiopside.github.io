@@ -12,6 +12,12 @@ main {
     margin: 2vw 0 2vw 0;
 }
 
+.latest {
+    margin-top: 3vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .project-info {
     background-color: var(--clr-bg3);
     display: flex;
