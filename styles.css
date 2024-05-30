@@ -47,20 +47,15 @@ a {
     flex: 1;
 }
 
-header {
+.header {
     background-color: var(--clr-bg7);;
     color: var(--clr-text);
-    padding: 20px 0;
-    position: fixed;
+    padding: 10px 0;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
-
-header + main {
-    padding-top: 140px;
-}
-
 
 .header-container {
     display: flex;
@@ -73,7 +68,7 @@ header + main {
     padding: 20px;
 }
 
-header .logo {
+.header .logo {
     max-height: 60px;
 }
 
@@ -133,6 +128,12 @@ nav {
 
 .nav-toggle .hamburger::after {
     top: 8px;
+}
+
+main {
+    background-image: linear-gradient(var(--clr-bg2), var(--clr-bg1));
+    flex: 1;
+    padding-top: 30px;
 }
 
 .container {
@@ -242,16 +243,12 @@ section {
     --project-hover-bg: #295446;
 }
 
-main {
-    background-image: linear-gradient(var(--clr-bg2), var(--clr-bg1));
-    flex: 1;
-}
-
 footer {
     background-color: var(--clr-bg2);
     color: var(--clr-text);
     text-align: center;
     padding: 20px 0;
+    margin-top: 50px;
 }
 
 footer .container {
@@ -294,13 +291,13 @@ footer .social-links a {
         display: flex;
     }
 
-    header .container {
+    .header .container {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
-    header .logo {
+    .header .logo {
         max-height: 40px; /* Adjust the logo size for mobile */
         margin: 0;
     }
