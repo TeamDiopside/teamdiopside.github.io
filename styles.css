@@ -245,6 +245,24 @@ section {
     --project-hover-bg: #295446;
 }
 
+.dc {
+    --project-bg: #433d74;
+    --project-hover-bg: #4f4881;
+    box-sizing: border-box;
+    flex-grow: 0;
+}
+
+#discord {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.discord {
+    display: flex;
+    border-radius: var(--radius);
+}
+
 footer {
     background-color: var(--clr-bg2);
     color: var(--clr-text);
@@ -311,6 +329,15 @@ footer .social-links a {
 
     .project {
         width: 100%;
+    }
+
+    #discord {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        gap: 3vh;
     }
 }
 
