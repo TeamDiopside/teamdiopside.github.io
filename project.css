@@ -16,6 +16,8 @@ main {
     margin-top: 3vh;
     width: 100%;
     box-sizing: border-box;
+    --project-bg: var(--clr-bg6);
+    --project-hover-bg: var(--clr-bg3);
 }
 
 .project-info {
@@ -51,6 +53,20 @@ main {
 .big-project-image {
     margin-right: 0px;
     max-width: 200px;
+}
+
+.mr-bg {
+    --project-bg: #234d40;
+    --project-hover-bg: #295446;
+}
+
+.cf-bg {
+    --project-bg: #322e51;
+    --project-hover-bg: #3b375b;
+}
+
+.download-color {
+    color: #03ec8b;
 }
 
 /* Responsive Styles */

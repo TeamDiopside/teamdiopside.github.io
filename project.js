@@ -30,7 +30,7 @@ async function loadProjectPage(projectName, projectInfo, projectId, projectType,
     }
 
     if (mrProjectType != "") {
-        addDownloadButton("https://modrinth.com/" + mrProjectType + "/" + projectId, "../assets/modrinth_icon.png", "Modrinth")
+        addDownloadButton("https://modrinth.com/" + mrProjectType + "/" + projectId, "../assets/modrinth_icon.png", "Modrinth", "mr-bg")
         let xmlHttp = new XMLHttpRequest()
         xmlHttp.onreadystatechange = function() {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
@@ -43,16 +43,17 @@ async function loadProjectPage(projectName, projectInfo, projectId, projectType,
         xmlHttp.send(null)
     }
     if (cfProjectType != "") {
-        addDownloadButton("https://www.curseforge.com/minecraft/" + cfProjectType + "/" + projectId, "../assets/curseforge_icon.png", "CurseForge")
+        addDownloadButton("https://www.curseforge.com/minecraft/" + cfProjectType + "/" + projectId, "../assets/curseforge_icon.png", "CurseForge", "cf-bg")
     }
 }
 
-function addDownloadButton(href, imgSrc, platformName) {
+function addDownloadButton(href, imgSrc, platformName, bgClass) {
     var newLink = document.createElement('a');
     newLink.href = href;
     newLink.target = '_blank';
     newLink.classList.add('project');
     newLink.classList.add('noSelect');
+    newLink.classList.add(bgClass);
 
     var newDiv = document.createElement('div');
     newDiv.classList.add('project-content');
@@ -71,7 +72,7 @@ function addDownloadButton(href, imgSrc, platformName) {
     linkContainer.appendChild(newLink);
 }
 
-function addLatestButton(href, version, downloads) {
+function addLatestButton(href, version, downloads, bgClass) {
     var newLink = document.createElement('a');
     newLink.href = href;
     newLink.target = '_blank';
@@ -92,7 +93,7 @@ function addLatestButton(href, version, downloads) {
     var anotherDescription = document.createElement('p');
     downloads = commafy(downloads);
     anotherDescription.textContent = downloads + " Downloads";
-    anotherDescription.style = "color: lime;"
+    anotherDescription.classList.add('download-color');
 
     newDiv.appendChild(newHeading);
     newDiv.appendChild(newDescription);
