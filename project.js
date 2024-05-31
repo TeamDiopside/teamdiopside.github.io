@@ -71,8 +71,6 @@ function addDownloadButton(href, imgSrc, platformName) {
     linkContainer.appendChild(newLink);
 }
 
-
-
 function addLatestButton(href, version, downloads) {
     var newLink = document.createElement('a');
     newLink.href = href;
@@ -92,6 +90,7 @@ function addLatestButton(href, version, downloads) {
     newDescription.textContent = version;
 
     var anotherDescription = document.createElement('p');
+    downloads = commafy(downloads);
     anotherDescription.textContent = downloads + " Downloads";
     anotherDescription.style = "color: lime;"
 
@@ -103,4 +102,15 @@ function addLatestButton(href, version, downloads) {
     
     var linkContainer = document.getElementById('download');
     linkContainer.appendChild(newLink);
+}
+
+function commafy(num) {
+    var str = num.toString().split('.');
+    if (str[0].length >= 5) {
+        str[0] = str[0].replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+    }
+    if (str[1] && str[1].length >= 5) {
+        str[1] = str[1].replace(/(\d{3})/g, '$1 ');
+    }
+    return str.join('.');
 }
