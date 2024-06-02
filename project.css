@@ -7,6 +7,7 @@ main {
     display: flex;
     margin-top: 5vw;
     justify-content: space-between;
+    gap: 5vw;
 }
 
 .projects h2 {
@@ -14,7 +15,7 @@ main {
 }
 
 .latest {
-    margin-top: 3vh;
+    margin-top: 40px;
     width: 100%;
     box-sizing: border-box;
     --project-bg: var(--clr-bg6);
@@ -33,7 +34,7 @@ main {
     width: 40vw;
 }
 
-.project-info h2 {
+.project-info h1 {
     margin: 0;
     align-self: center;
     text-align: center;
@@ -73,6 +74,10 @@ main {
 
 #images {
     margin-top: 0;
+}
+
+#images h2 {
+    text-align: center;
 }
 
 #imageGrid {
@@ -115,6 +120,7 @@ main {
     .project-info {
         width: 85vw;
         padding: 5vw;
+        gap: 5vw;
         align-self: flex-start;
     }
 
@@ -131,8 +137,12 @@ main {
         margin-right: 5vw;
     }
 
-    .project-info h2{
+    .project-info h1 {
         font-size: xx-large;
+    }
+
+    .project-title {
+        gap: 4vw;
     }
 
     #imageGrid {
