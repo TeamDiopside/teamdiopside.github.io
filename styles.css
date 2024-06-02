@@ -340,6 +340,10 @@ footer .social-links a {
         justify-content: space-between;
         gap: 3vh;
     }
+
+    .discord {
+        align-self: center;
+    }
 }
 
 ::-webkit-scrollbar {
