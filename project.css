@@ -30,12 +30,14 @@ main {
     gap: 4vh;
     border-radius: 0 20px 20px 0;
     box-shadow: 0 0 15px var(--clr-bg2);
+    width: 40vw;
 }
 
 .project-info h2 {
     margin: 0;
     align-self: center;
     text-align: center;
+    font-size: xxx-large;
 }
 
 .project-info p {
@@ -69,6 +71,34 @@ main {
     color: #03ec8b;
 }
 
+#images {
+    margin-top: 0;
+}
+
+#imageGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+    align-items: start;
+    align-self: center;
+    width: 90vw;
+}
+
+#imageGrid img {
+    --project-bg: var(--clr-bg6);
+    --project-hover-bg: var(--clr-bg3);
+    background-color: var(--project-bg);
+    border: 5px solid var(--clr-bg6);
+    border-radius: var(--radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 200ms ease;
+    max-width: 20vw;
+    width: fit-content;
+    flex-grow: 1;
+}
+
 /* Responsive Styles */
 @media (max-width: 850px) {
 
@@ -99,5 +129,17 @@ main {
 
     .project-info div{
         margin-right: 5vw;
+    }
+
+    .project-info h2{
+        font-size: xx-large;
+    }
+
+    #imageGrid {
+        gap: 1vh;
+    }
+
+    #imageGrid img {
+        max-width: 80vw;
     }
 }

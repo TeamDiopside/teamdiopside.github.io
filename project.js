@@ -30,20 +30,60 @@ async function loadProjectPage(projectName, projectInfo, projectId, projectType,
     }
 
     if (mrProjectType != "") {
-        addDownloadButton("https://modrinth.com/" + mrProjectType + "/" + projectId, "../assets/modrinth_icon.png", "Modrinth", "mr-bg")
-        let xmlHttp = new XMLHttpRequest()
+        // Downloads
+        addDownloadButton("https://modrinth.com/" + mrProjectType + "/" + projectId, "../assets/modrinth_icon.png", "Modrinth", "mr-bg");
+        let xmlHttp = new XMLHttpRequest();
         xmlHttp.onreadystatechange = function() {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                 const obj = JSON.parse(xmlHttp.responseText);
                 const latest = obj[0];
                 addLatestButton(latest.files[0].url, latest.name, latest.downloads);
             }
-        }
-        xmlHttp.open("GET", "https://api.modrinth.com/v2/project/" + projectId + "/version", true) // true for asynchronous 
-        xmlHttp.send(null)
+        };
+        xmlHttp.open("GET", "https://api.modrinth.com/v2/project/" + projectId + "/version", true); // true for asynchronous 
+        xmlHttp.send(null);
+
+        // Gallery
+        let xmlHttp2 = new XMLHttpRequest();
+        xmlHttp2.onreadystatechange = function() {
+            if (xmlHttp2.readyState == 4 && xmlHttp2.status == 200) {
+                const obj = JSON.parse(xmlHttp2.responseText);
+                const gallery = obj.gallery;
+                if (gallery.length == 0) {
+                    return;
+                }
+
+                var mainDiv = document.getElementById('main');
+
+                var galleryDiv = document.createElement('div');
+                galleryDiv.classList.add('projects');
+                galleryDiv.id = 'images';
+                mainDiv.appendChild(galleryDiv);
+
+                var gallerySection = document.createElement('section');
+                gallerySection.classList.add('container');
+                galleryDiv.appendChild(gallerySection);
+
+                var galleryTitle = document.createElement('h2');
+                galleryTitle.textContent = "Gallery";
+                gallerySection.appendChild(galleryTitle);
+                
+                var gridDiv = document.createElement('div');
+                gridDiv.id = 'imageGrid';
+                gallerySection.appendChild(gridDiv);
+
+                for (var i = 0; i < gallery.length; i++) {
+                    var image = document.createElement('img');
+                    image.src = gallery[i].url;
+                    gridDiv.appendChild(image);
+                }
+            }
+        };
+        xmlHttp2.open("GET", "https://api.modrinth.com/v2/project/" + projectId, true); // true for asynchronous 
+        xmlHttp2.send(null);
     }
     if (cfProjectType != "") {
-        addDownloadButton("https://www.curseforge.com/minecraft/" + cfProjectType + "/" + projectId, "../assets/curseforge_icon.png", "CurseForge", "cf-bg")
+        addDownloadButton("https://www.curseforge.com/minecraft/" + cfProjectType + "/" + projectId, "../assets/curseforge_icon.png", "CurseForge", "cf-bg");
     }
 }
 
