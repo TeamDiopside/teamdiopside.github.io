@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
+function toggleNav() {
+    document.querySelector('.nav-links').classList.toggle('mobile-hidden');
+    document.querySelector('.hamburger-nav').classList.toggle('hamburger-active');
+}
 
-    navToggle.addEventListener('click', function () {
-        navToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-});
+function closeNav() {
+    document.querySelector('.nav-links').classList.add('mobile-hidden');
+    document.querySelector('.hamburger-nav').classList.add('hamburger-active');
+}

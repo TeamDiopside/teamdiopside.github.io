@@ -34,7 +34,7 @@ a {
 }
 
 .link {
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     border-bottom: 2px solid #00000000;
 }
 
@@ -50,7 +50,6 @@ a {
 .header {
     background-color: var(--clr-bg7);;
     color: var(--clr-text);
-    padding: 10px 0;
     position: sticky;
     top: 0;
     width: 100%;
@@ -63,10 +62,10 @@ a {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 30px;
     
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .header .logo {
@@ -84,13 +83,10 @@ nav {
 
 .nav-links {
     list-style: none;
-    margin: 0;
+    margin: 0 20px;
     padding: 0;
     display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
+    gap: 20px;
 }
 
 .nav-links a {
@@ -105,7 +101,7 @@ nav {
     cursor: pointer;
 }
 
-.nav-toggle .hamburger {
+.hamburger {
     display: block;
     width: 25px;
     height: 3px;
@@ -113,22 +109,8 @@ nav {
     position: relative;
 }
 
-.nav-toggle .hamburger::before,
-.nav-toggle .hamburger::after {
-    content: '';
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--clr-text);
-    position: absolute;
-}
-
-.nav-toggle .hamburger::before {
-    top: -8px;
-}
-
-.nav-toggle .hamburger::after {
-    top: 8px;
+.hamburger-middle {
+    margin: 5px 0;
 }
 
 main {
@@ -162,6 +144,7 @@ section {
     gap: 40px;
     align-items: start;
     align-self: center;
+    margin: 20px 0;
 }
 
 .project {
@@ -202,6 +185,8 @@ section {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    margin: 0 20px;
+    text-wrap: balance;
 }
 
 .project-info {
@@ -256,7 +241,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 3vw;
+    gap: 40px;
 }
 
 .discord {
@@ -266,55 +251,55 @@ section {
 
 footer {
     background-color: var(--clr-bg2);
-    color: var(--clr-text);
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 20px;
     margin-top: 50px;
-}
-
-footer .container {
-    padding: 0;
 }
 
 footer .social-links {
     display: flex;
     align-self: center;
-    margin-bottom: 10px;
-    max-width: 90%;
+    margin-bottom: 20px;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-footer .social-links a {
-    color: var(--clr-text);
-    text-decoration: none;
-    margin: 0 10px;
+    gap: 20px;
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 835px) {
 
     .hamburger-nav {
         display: flex;
+        transition: rotate 0.5s;
+        rotate: 0;
+    }
+
+    .hamburger-active {
+        rotate: 180deg;
     }
 
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
-        margin-top: 20px;
+        margin: 30px 0 0 0;
+        max-height: 100vh;
+        transition: all 0.3s;
     }
 
-    .nav-links li {
-        margin: 10px 0;
+    .nav-links .link:hover {
+        color: var(--clr-text);
+        border-bottom: #00000000;
+    }
+
+    .mobile-hidden {
+        margin: 0;
+        opacity: 0;
+        max-height: 0;
     }
 
     .nav-toggle {
         display: block;
-    }
-
-    .active {
-        display: flex;
     }
 
     .header .container {
