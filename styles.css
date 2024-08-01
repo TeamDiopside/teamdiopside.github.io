@@ -309,7 +309,7 @@ footer .social-links {
     }
 
     .header .logo {
-        max-height: 40px; /* Adjust the logo size for mobile */
+        max-height: 9vw; /* Adjust the logo size for mobile */
         margin: 0;
     }
 
