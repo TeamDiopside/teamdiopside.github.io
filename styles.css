@@ -230,6 +230,11 @@ section {
     --project-hover-bg: #295446;
 }
 
+.cy-bg {
+    --project-bg: #1D1D5A;
+    --project-hover-bg: #2E3A73;
+}
+
 .dc {
     --project-bg: #433d74;
     --project-hover-bg: #4f4881;
